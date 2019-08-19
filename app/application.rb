@@ -19,7 +19,7 @@ class Application
         resp.write "#{item_in_cart}\n"
       end
     elsif req.path.match(/add/)
-      @@items.each do |item|
+      add = gets
         resp.write "#{item}\n"
       end 
 
