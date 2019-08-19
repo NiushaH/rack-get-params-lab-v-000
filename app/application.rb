@@ -27,7 +27,7 @@ class Application
         @@cart << item_for_cart
         resp.write "added #{item_for_cart} to cart.\n"
       else
-        return "That item is not available for purchase."
+        return "We don't have that item."
       end
     else
       resp.write "Path Not Found"
