@@ -23,11 +23,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item_for_cart = req.params["item"]
-      resp.write handle_search(search_term)
-
-      
-      item_to_add = gets.strip
-      if @@items.include?(item_to_add) == TRUE
+      if @@items.include?(item_for_cart) == TRUE
         @@cart << item_to_add
         resp.write "Added #{item} to cart.\n"
       else
