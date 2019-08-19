@@ -21,10 +21,15 @@ class Application
         resp.write "#{item_in_cart}\n"
         end
       end
-    # elsif req.path.match(/add/)
+    elsif req.path.match(/add/)
+      item_to_add = gets.strip
+      if @@items.include?(item_to_add) == TRUE
+        @@cart << item_to_add
+        resp.write "Added #{item} to cart.\n"
+      else
+        return "That item is not available for purchase."
+      end
       
-    #   item_to_add = gets.strip
-    #   resp.write "Added #{item} to cart.\n"
     else
       resp.write "Path Not Found"
     end
@@ -39,12 +44,4 @@ class Application
     end
   end
   
-  # def add_to_cart(item_to_add)
-  #   item_to_add = gets.strip
-  #   if @@items.include?(item_to_add) == TRUE
-  #     @@cart << item_to_add
-  #   else
-  #     return "That item is not available for purchase."
-  #   end
-  # end
 end
