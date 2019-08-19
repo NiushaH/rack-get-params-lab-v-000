@@ -24,8 +24,8 @@ class Application
     elsif req.path.match(/add/)
       item_for_cart = req.params["item"]
       if @@items.include?(item_for_cart) == TRUE
-        @@cart << item_to_add
-        resp.write "Added #{item} to cart.\n"
+        @@cart << item_for_cart
+        resp.write "Added #{item_for_cart} to cart.\n"
       else
         return "That item is not available for purchase."
       end
