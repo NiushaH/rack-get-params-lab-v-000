@@ -35,4 +35,13 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
+  
+  def add_to_cart(item_to_add)
+    item_to_add = gets.strip
+    if @@items.include?(item_to_add) == TRUE
+      @@cart << item_to_add
+    else
+      
+    end
+  end
 end
