@@ -25,7 +25,7 @@ class Application
       item_for_cart = req.params["item"]
       if @@items.include?(item_for_cart) == TRUE
         @@cart << item_for_cart
-        resp.write "Added #{item_for_cart} to cart.\n"
+        resp.write "added #{item_for_cart} to cart.\n"
       else
         return "That item is not available for purchase."
       end
