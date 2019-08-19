@@ -29,7 +29,6 @@ class Application
       else
         return "That item is not available for purchase."
       end
-      
     else
       resp.write "Path Not Found"
     end
