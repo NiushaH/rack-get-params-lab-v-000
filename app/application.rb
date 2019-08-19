@@ -22,7 +22,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item_to_add = req.params["item"]
+      item_for_cart = req.params["item"]
       resp.write handle_search(search_term)
 
       
