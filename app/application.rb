@@ -19,10 +19,8 @@ class Application
         resp.write "#{item_in_cart}\n"
       end
     elsif req.path.match(/add/)
-      add = GET
-        resp.write "#{add}\n"
-      end 
-
+      add = 
+      resp.write GET"#{item}\n"
     else
       resp.write "Path Not Found"
     end
