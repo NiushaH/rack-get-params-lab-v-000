@@ -22,7 +22,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item_to_add = req.params[]
+      item_to_add = req.params["item"]
       resp.write handle_search(search_term)
 
       
@@ -47,5 +47,4 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
-  
 end
